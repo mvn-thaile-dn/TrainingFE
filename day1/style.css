@@ -1,0 +1,47 @@
+* {
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: green;
+  padding: 3em;
+}
+
+header h1 {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  margin-bottom: 2em;
+}
+main .main-content {
+  border: 1px solid #000000;
+  padding: 2em;
+  width: 70%;
+}
+
+main .related_topic {
+  border: 1px solid blue;
+  width: 30%;
+}
+footer {
+  background-color: antiquewhite;
+}
+
+footer .copyright {
+  text-align: center;
+  padding: 2em;
+}
+
+.list-person-table table {
+  border-collapse: collapse;
+  border: 2px solid black;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.list-person-table table thead {
+  text-align: left;
+}

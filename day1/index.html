@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>This is website of Asiantech and this is heading of website</h1>
+  </header>
+  <main>
+    <div class="main-content">
+      <article class="introduction-content">
+        <h2>Introducing about Asiantech Company</h2>
+        <p>Asiantech is a software company. It is located at Block 35, Street No 4, Da Nang Industrial Zone, Son Tra
+          District </p>
+        <section>
+          <h3>Company size</h3>
+          <p>Asiantech has over 300 employees with handsome boys and sexy girls. They are very active and intelligent
+          </p>
+        </section>
+        <section>
+          <h3>Open positions</h3>
+          <ul>
+            <li>Frontend developer</li>
+            <li>IOS developer</li>
+            <li>Bussiness Analyst</li>
+            <li>Japanese Comminicator</li>
+          </ul>
+        </section>
+        <section>
+          <h3>How to receive new job in AT</h3>
+          <ol>
+            <li>Fill your information information </li>
+            <li>Wait for the reply message</li>
+            <li>Interview</li>
+            <li>Sign the contract if pass interview</li>
+          </ol>
+        </section>
+      </article>
+
+      <article class="form-apply">
+        <h2>This is form to apply for job</h2>
+        <form action="">
+          <div class="form-group">
+            <label for="fullname"><span>Your name:</span></label>
+            <input type="text" name="fullname" id="fullname">
+          </div>
+          <div class="form-group">
+            <label for="phone"><span>Phone number :</span></label>
+            <input type="text" name="phone_number" id="phone">
+          </div>
+          <div class="form-group">
+            <label for="birthday"><span>Birthday: </span></label>
+            <input type="date" name="birthday" id="birthday">
+          </div>
+          <div class="form-group">
+            <label for="province"></label>
+            <select name="province" id="province">
+              <option value="Quang name">Quang Nam</option>
+              <option value="Da nang">Da nang</option>
+              <option value="Hue">Hue</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="about-you">Description about your experience</label>
+            <textarea name="about_you" id="about-you" cols="30" rows="10"></textarea>
+          </div>
+          <div class="form-group">
+            <fieldset>
+              <legend>Job apply</legend>
+              <ul>
+                <li>
+                  <label for="job1">Frontend Deverloper</label>
+                  <input type="radio" name="job" id="job1" value="1">
+                </li>
+                <li>
+                  <label for="job2">IOS Developer</label>
+                  <input type="radio" name="job" id="job2" value="2">
+                </li>
+                <li>
+                  <label for="job3">Bussiness Analyst</label>
+                  <input type="radio" name="job" id="job3" value="3">
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="form-group">
+            <input type="button" value="Submit">
+          </div>
+        </form>
+      </article>
+
+      <article class="list-person-table">
+        <h2>Company personnel statistics</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Created Date</th>
+              <th>Description</th>
+              <th>Number of people</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td colspan="3">Sum</td>
+              <td>300</td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>Java</td>
+              <td>20/02/2018</td>
+              <td>Java team has many handsome people</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>FE</td>
+              <td>20/01/2015</td>
+              <td>FE team has many crazy and cute people</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>Android</td>
+              <td>10/01/2015</td>
+              <td>Android team : No information about this team :))</td>
+              <td>150</td>
+            </tr>
+            <tr>
+              <td>Comtor Team</td>
+              <td>20/02/2016</td>
+              <td>Comtor Team have many people that can speak Japanese language</td>
+              <td>50</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="test">
+        <h2>This is test section</h2>
+        <div>
+          <h3>This is h3</h3>
+          <h4>This is h4</h4>
+          <h5>This is h5</h5>
+          <h6>This is h6</h6>
+          <p>This text is <strong>strong</strong></p>
+          <p>This text is <i>italic</i></p>
+          <p>This is time element <time datetime="2020-11-20">November 20/11</time></p>
+        </div>
+        <hr>
+        <img src="hothiennga.jpg" style="width: 50%;" alt="ho thien nga ballet">
+        <br>
+        <iframe width="966" height="543" src="https://www.youtube.com/embed/USR4P6gSJjc?list=RDUSR4P6gSJjc"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <video width="320" height="240" controls>
+          <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+          <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+      </article>
+    </div>
+    <aside class="related_topic">
+      <h2>This is related topic</h2>
+      <ul>
+        <li><a href="#">Some jobs of company</a></li>
+        <li><a href="#">Advanced topic</a></li>
+        <li><a href="#">How to become a talent developer</a></li>
+        <li><a href="#">Learn to solve problems</a></li>
+      </ul>
+    </aside>
+  </main>
+  <footer>
+    <p class="copyright">Copyright Asian Tech Co., Ltd. 2019</p>
+  </footer>
+</body>
+
+</html>
