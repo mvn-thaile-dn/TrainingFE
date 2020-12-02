@@ -202,3 +202,13 @@
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
+  .footer-bottom {
+    background-color: rgb(82, 79, 79);
+    padding: 5px 0px;
+  }
+
+  .footer-bottom p {
+    text-align: center;
+    color: white;
+  }
