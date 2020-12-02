@@ -74,6 +74,10 @@
     font-weight: bold;
   }
 
+  .header-menu li a:hover {
+    color: black;
+  }
+
 .socials {
     display: flex;
     align-items: center;
@@ -112,6 +116,10 @@
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
+  }
+
+  .add-to-card:hover {
+    background-color: blue;
   }
 
   .section-banner-txt {
@@ -194,9 +202,3 @@
     padding-top: 10px;
     padding-bottom: 10px;
   }
-
-
-
-
-
-
