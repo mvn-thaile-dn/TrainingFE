@@ -6,94 +6,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://kit.fontawesome.com/cfc5d27bdd.js" crossorigin="anonymous"></script>
-  <style>
-    .mySlides {
-      display: none;
-    }
-
-    .w3-content {
-      max-width: 100%;
-    }
-
-    .w3-content img {
-      width: 100%;
-    }
   </style>
 </head>
 
 <body>
   <header class="page-header">
     <div class="header-top">
-      <div class="container">
+      <div class="container header-top-container">
         <a href="#" class="logo">
           <img src="./image/logo-shop.png" alt="shop-logo" width="100px" height="100px">
         </a>
         <ul class="header-actions">
-          <li><a href="#"><i class="fas fa-search"></i></a></li>
-          <li><a href="#"><i class="fas fa-user"></i></a></li>
-          <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+          <li><a href="#"><i class="fas fa-search fa-2x"></i></a></li>
+          <li><a href="#"><i class="fas fa-user fa-2x"></i></a></li>
+          <li><a href="#"><i class="fas fa-shopping-cart fa-2x"></i></a></li>
         </ul>
       </div>
     </div>
-    <nav class="header-nav block-black">
-      <div class="container">
+    <nav class="header-nav">
+      <div class="container nav-content">
         <ul class="header-menu">
-          <li><a href="#">Product</a></li>
+          <li><a class="active" href="#">Product</a></li>
           <li><a href="#">News</a></li>
           <li><a href="#">Category</a></li>
           <li><a href="#">About us</a></li>
           <li><a href="#">Contact us</a></li>
         </ul>
         <ul class="socials">
-          <li><a href=""><i class="fab fa-facebook"></i></a></li>
-          <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-          <li><a href=""><i class="fab fa-google"></i></a></li>
+          <li><a href=""><i class="fab fa-facebook fa-2x"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter-square fa-2x"></i></a></li>
+          <li><a href=""><i class="fab fa-google fa-2x"></i></a></li>
         </ul>
       </div>
     </nav>
   </header>
   <main class="page-main">
     <section class="section-slideshow">
-      <ul class="w3-content w3-display-container">
-        <li class="mySlides"><img src="./image/sl1.jpg" alt="camera"></li>
-        <li class="mySlides"><img src="./image/sl2.jpg" alt="camera"></li>
-        <li class="mySlides"><img src="./image/sl3.jpg" alt="camera"></li>
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      <ul class="slideshow-list">
+        <li><img src="./image/sl1.png" alt="slideshow-img"></li>
       </ul>
     </section>
     <section class="section-product">
       <div class="container">
         <h2 class="section-title">LODEM IDSUM</h2>
-        <ul class="product-list">
-          <li class="product-item">
-            <a href=""><img src="./image/camera.jpg" alt=""></a>
+        <ul class="row product-list">
+          <li class="col-3 product-item">
+            <a href=""><img src="./image/prd.jpg" alt=""></a>
             <div class="product-infor">
               <h3 class="product-name">Item name</h3>
               <strong class="product-price">$15</strong>
             </div>
             <a href="#" class="btn btn-primary add-to-card">View Detail</a>
           </li>
-          <li class="product-item">
-            <a href=""><img src="./image/camera.jpg" alt=""></a>
+          <li class="col-3 product-item">
+            <a href=""><img src="./image/prd.jpg" alt=""></a>
             <div class="product-infor">
               <h3 class="product-name">Item name</h3>
               <strong class="product-price">$15</strong>
             </div>
             <a href="#" class="btn btn-primary add-to-card">View Detail</a>
           </li>
-          <li class="product-item">
-            <a href=""><img src="./image/camera.jpg" alt=""></a>
+          <li class="col-3 product-item">
+            <a href=""><img src="./image/prd.jpg" alt=""></a>
             <div class="product-infor">
               <h3 class="product-name">Item name</h3>
               <strong class="product-price">$15</strong>
             </div>
             <a href="#" class="btn btn-primary add-to-card">View Detail</a>
           </li>
-          <li class="product-item">
-            <a href=""><img src="./image/camera.jpg" alt=""></a>
+          <li class="col-3 product-item">
+            <a href=""><img src="./image/prd.jpg" alt=""></a>
             <div class="product-infor">
               <h3 class="product-name">Item name</h3>
               <strong class="product-price">$15</strong>
@@ -106,39 +89,38 @@
     <section class="section-banner-txt">
       <h2 class="section-title">Lorem ipsum dolor </h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo iure nostrum, natus assumenda nobis quas
-        ratione. Praesentium, vero excepturi labore doloremque, sequi, sapiente exercitationem modi quos repellat
-        cupiditate possimus asperiores.</p>
+        ratione.</p>
     </section>
     <section class="section-product">
       <div class="container">
         <h2 class="section-title">LODEM IDSUM</h2>
-        <ul class="product-list">
-          <li class="product-item">
-            <a href=""><img src="./image/camera.jpg" alt=""></a>
+        <ul class="row product-list">
+          <li class="col-3 product-item">
+            <a href=""><img src="./image/prd.jpg" alt=""></a>
             <div class="product-infor">
               <h3 class="product-name">Item name</h3>
               <strong class="product-price">$15</strong>
             </div>
             <a href="#" class="btn btn-primary add-to-card">View Detail</a>
           </li>
-          <li class="product-item">
-            <a href=""><img src="./image/camera.jpg" alt=""></a>
+          <li class="col-3 product-item">
+            <a href=""><img src="./image/prd.jpg" alt=""></a>
             <div class="product-infor">
               <h3 class="product-name">Item name</h3>
               <strong class="product-price">$15</strong>
             </div>
             <a href="#" class="btn btn-primary add-to-card">View Detail</a>
           </li>
-          <li class="product-item">
-            <a href=""><img src="./image/camera.jpg" alt=""></a>
+          <li class="col-3 product-item">
+            <a href=""><img src="./image/prd.jpg" alt=""></a>
             <div class="product-infor">
               <h3 class="product-name">Item name</h3>
               <strong class="product-price">$15</strong>
             </div>
             <a href="#" class="btn btn-primary add-to-card">View Detail</a>
           </li>
-          <li class="product-item">
-            <a href=""><img src="./image/camera.jpg" alt=""></a>
+          <li class="col-3 product-item">
+            <a href=""><img src="./image/prd.jpg" alt=""></a>
             <div class="product-infor">
               <h3 class="product-name">Item name</h3>
               <strong class="product-price">$15</strong>
@@ -172,27 +154,27 @@
   </main>
   <footer class="page-footer">
     <div class="footer-top">
-      <div class="container">
+      <div class="container footer-top-content">
         <form action="" class="form-newsletter">
-          <label for="" class="form-newsletter-label">NewLetter</label>
-          <div class="newsletter">
+          <label for="" class="text-light text-bold mr-10">NewLetter</label>
+          <div class="newsletter-content">
             <input type="text" class="text">
-            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
           </div>
         </form>
         <ul class="socials">
-          <li><span>Follow on</span></li>
-          <li><a href=""><i class="fab fa-facebook"></i></a></li>
-          <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-          <li><a href=""><i class="fab fa-google"></i></a></li>
+          <li><span class="text-light text-bold">Follow on</span></li>
+          <li><a href=""><i class="fab fa-facebook fa-2x"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter-square fa-2x"></i></a></li>
+          <li><a href=""><i class="fab fa-google fa-2x"></i></a></li>
         </ul>
       </div>
     </div>
     <div class="footer-middle">
-      <div class="container">
-        <div class="footer-middle-col">
+      <div class="row container">
+        <div class="col-3 footer-middle-col">
           <h3 class="footer-link">Footer link</h3>
-          <ul>
+          <ul class="footer-link-list">
             <li><a href="#">Lorem ipsum, dolor sit amet</a></li>
             <li><a href="#">Lorem ipsum, dolor sit amet</a></li>
             <li><a href="#">Lorem ipsum, dolor sit amet</a></li>
@@ -200,9 +182,9 @@
             <li><a href="#">Lorem ipsum, dolor sit amet</a></li>
           </ul>
         </div>
-        <div class="footer-middle-col">
+        <div class="col-3 ooter-middle-col">
           <h3 class="footer-link">Footer link</h3>
-          <ul>
+          <ul class="footer-link-list">
             <li><a href="#">Lorem ipsum, dolor sit amet</a></li>
             <li><a href="#">Lorem ipsum, dolor sit amet</a></li>
             <li><a href="#">Lorem ipsum, dolor sit amet</a></li>
@@ -210,17 +192,18 @@
             <li><a href="#">Lorem ipsum, dolor sit amet</a></li>
           </ul>
         </div>
-        <div class="footer-middle-col footer-middle-map">
+        <div class="col-6 footer-middle-col footer-middle-map">
           <h3 class="footer-link">Footer map</h3>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1971325.118001164!2d106.34887615718036!3d15.199787374593612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31157a4d736a1e5f%3A0xb03bb0c9e2fe62be!2zVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1605845123838!5m2!1svi!2s"
-            width="600" height="185" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+             frameborder="0" style="border:0;width: 100%;" allowfullscreen="" aria-hidden="false"
             tabindex="0"></iframe>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>Copy right 2019</p>
-      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copy right 2019</p>
+    </div>  
   </footer>
   <script>
     var slideIndex = 1;
