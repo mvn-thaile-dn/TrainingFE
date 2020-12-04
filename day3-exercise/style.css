@@ -59,11 +59,14 @@
     padding: 0 15px;
   }
 
+  .header-top {
+    background-color: #eeeef7ad;
+  }
+
   .header-top-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #eeeef7ad;
   }
   .header-actions {
     display: flex;
@@ -271,6 +274,21 @@
     }
     .social-bottom {
       justify-content: space-between;
+    }
+    .partner-list {
+      flex-wrap: wrap;
+    }
+    .partner-item {
+      flex: 1 100px;
+    }
+    .partner-item:last-child {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .container {
+      width: 1140px;
     }
   }
 
