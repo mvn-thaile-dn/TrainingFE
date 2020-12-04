@@ -236,6 +236,9 @@
     .col-6 {
       width: 100%;
     }
+    .partner-item:last-child {
+      display: none;
+    }
   }
   @media only screen and (max-width: 479px) {
     .nav-content {
@@ -282,6 +285,18 @@
       flex: 1 100px;
     }
     .partner-item:last-child {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 430px) {
+    .partner-item:nth-child(4) {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 330px) {
+    .partner-item:nth-child(3) {
       display: none;
     }
   }
