@@ -239,6 +239,9 @@
     .partner-item:last-child {
       display: none;
     }
+    .product-item {
+      margin-bottom: 2em;
+    }
   }
   @media only screen and (max-width: 479px) {
     .nav-content {
@@ -311,7 +314,7 @@
       width: 960px;
     }
   }
-  @media only screen and (min-width: 768) {
+  @media only screen and (min-width: 768px) {
     .container {
       width: 720px;
     }
