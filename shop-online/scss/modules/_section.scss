@@ -1,27 +1,25 @@
-.section-intro-center {
-  text-align: center;
-  @include pxRem(margin-bottom, 20);
-  .section-title {
-    font-size: map-get($font-sizes, m);
-    font-weight: map-get($font-weights, bold);
-    &::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      @include pxRem(width, 50);
-      @include pxRem(right, -62);
-      @include pxRem(top, 11);
-      background: #075159;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      @include pxRem(width, 50);
-      @include pxRem(left, -62);
-      @include pxRem(top, 11);
-      background: #075159;
-    }
+
+.section-title {
+  font-size: map-get($font-sizes, m);
+  font-weight: map-get($font-weights, bold);
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    @include pxRem(width, 50);
+    @include pxRem(right, -62);
+    @include pxRem(top, 11);
+    background: #075159;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    @include pxRem(width, 50);
+    @include pxRem(left, -62);
+    @include pxRem(top, 11);
+    background: #075159;
   }
 }
+
 

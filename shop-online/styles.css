@@ -460,35 +460,31 @@ input {
 .lbl-trending {
   background-color: #f5a100; }
 
-.section-intro-center {
-  text-align: center;
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem; }
-  .section-intro-center .section-title {
-    font-size: 18px;
-    font-weight: 700; }
-    .section-intro-center .section-title::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      width: 50px;
-      width: 3.125rem;
-      right: -62px;
-      right: -3.875rem;
-      top: 11px;
-      top: 0.6875rem;
-      background: #075159; }
-    .section-intro-center .section-title::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      width: 50px;
-      width: 3.125rem;
-      left: -62px;
-      left: -3.875rem;
-      top: 11px;
-      top: 0.6875rem;
-      background: #075159; }
+.section-title {
+  font-size: 18px;
+  font-weight: 700; }
+  .section-title::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    width: 3.125rem;
+    right: -62px;
+    right: -3.875rem;
+    top: 11px;
+    top: 0.6875rem;
+    background: #075159; }
+  .section-title::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    width: 3.125rem;
+    left: -62px;
+    left: -3.875rem;
+    top: 11px;
+    top: 0.6875rem;
+    background: #075159; }
 
 .tab-link {
   display: inline-block;
