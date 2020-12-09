@@ -1,0 +1,110 @@
+// === Font === //
+$font-body: 'Open Sans', sans-serif;
+
+// === Font Weight === //
+$font-weights: (
+  normal: 400,
+  medium: 600,
+  bold: 700
+);
+
+// == Breakpoints === //
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px
+);
+
+// === Colors === //
+$colors: (
+  primary: #333,
+  white: #fff,
+  black: #111,
+  dark-black: #000,
+  txt-black: #333,
+  txt-gray-dark: #777,
+  txt-gray: #939394,
+  border-black: #333,
+  border-gray: #e4e4e4,
+  border-gray-light: #f1f1f1,
+  bg-gray: #e9eaec,
+  bg-gray-light: #f7f7f7,
+  brand-html: #f2652a,
+  brand-css: #379ad7,
+  brand-js: #f1da4e,
+  brand-scss: #be5f8b,
+  brand-nodejs: #7cbe42
+);
+
+// === z-index === //
+$zindexs: (
+  dropdown: 1000,
+  sticky: 1020,
+  fixed: 1030,
+  modal-backdrop: 1040,
+  modal: 1050,
+  popover: 1060,
+  tooltip: 1070
+);
+
+// === Typography === //
+$font-size-base: 0.875rem !default; // 14px
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
+
+$h-font-size: (
+  h1: $font-size-base * 2.5,
+  h2: $font-size-base * 2,
+  h3: $font-size-base * 1.75,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base * 1.25,
+  h6: $font-size-base
+);
+
+$font-sizes: (
+  // Texts and subtitles
+  xs:  12px,
+  xxs: 13px,
+  s:   14px, // base size, used to tranform px to rem
+  xm:  16px,
+  // Headers
+  m:   18px, // h6
+  l:   20px, // h5
+  xl:  26px, // h4
+  xxl: 32px, // h3
+  3xl: 44px, // h2
+  4xl: 48px, // big header :D
+  5xl: 56px, // h1
+);
+
+$icon-sizes: (
+  s: 16px,
+  m: 24px,
+  l: 32px,
+  xl: 40px
+);
+
+$line-heights: (
+  xs:  16px,
+  s:   18px,
+  xm:  20px,
+  m:   22px,
+  l:   24px, // h6
+  xl:  26px, // h5
+  xxl: 32px, // h4
+  3xl: 40px, // h3
+  4xl: 56px, // h2
+  5xl: 60px, // big header
+  6xl: 72px, // h1
+);
+
+$letter-spacings: (
+  xs: .1px,
+  s:  .2px,
+  xm: .3px,
+  m:  .4px,
+  xl:  .5px,
+  xxl: 1px,
+);

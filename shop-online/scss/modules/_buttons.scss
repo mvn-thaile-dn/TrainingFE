@@ -1,0 +1,30 @@
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  @include pxRem(font-size, 15);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: normal;
+  transition: all 0.3s ease-in-out ;
+  color: map-get($colors, white);
+  &:hover {
+    color: #fff;
+    opacity: 1;
+    background-color: #ff9f23;
+  }
+}
+.btn-primary {
+  background-color: #ef8700; 
+}
+.btn-secondary {
+  color: map-get($colors, white);
+  background-color: #075159;
+  border: 1px solid map-get($colors, white);
+  &:hover {
+    background-color: #0b7c88;
+  }
+}
