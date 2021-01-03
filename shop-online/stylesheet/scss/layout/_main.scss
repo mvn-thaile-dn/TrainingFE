@@ -1,0 +1,178 @@
+
+.section-slideshow {
+  .slideshow-item {
+    position: relative;
+    height: 500px;
+  }
+  .slideshow-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.section-collections {
+  @include pxRem(margin-top, 35);
+  li:hover {
+    animation-delay: 50ms;
+    animation-name: fadeInUp;
+  }
+  a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.8;
+    * {
+      transition: all 0.4s linear;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 1px solid #fff;
+      z-index: 1;
+      opacity: 0.5;
+    }
+    &:hover {
+      span {
+        opacity: 0;
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  span {
+    color: #fff;
+    font-weight: map-get($font-weights, bold);
+    @include pxRem(font-size, 18);
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  }
+}
+.section-sales {
+  .wrapper {
+    position: relative;
+    width: 100%;
+    padding: 4%;
+    background-size: cover;
+    background-repeat: no;
+    background-image: url('assets/img/section_laptop.jpg');
+    background-position: center center;
+  }
+  .sales-content {
+    @include pxRem(padding, 35);
+    margin: 0 auto;
+    @include pxRem(max-width, 550);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 15px rgba(255,255,255,0.3);
+    h2 {
+      color: #000;
+      text-transform: uppercase;
+      @include pxRem(font-size, 26);
+      @include pxRem(margin-bottom, 15);
+    }
+    p {
+      @include pxRem(font-size, 17);
+      @include pxRem(margin-bottom, 25);
+    }
+  }
+}
+.section-trendding {
+  .collection-tabs {
+    text-align: center;
+    @include pxRem(margin-bottom, 30);
+    li {
+      display: inline-block;
+      @include pxRem(margin, 0 3);
+      &.active a {
+        border: 2px solid map-get($colors, primary);
+        color: map-get($colors, primary);
+        background-color: #fff;
+      }
+    }
+  }
+}
+.section-popular-collections {
+  .popular-list {
+    display: flex;
+    align-items: center;
+  }
+  .popular-item {
+    @include pxRem(width, 228);
+    @include pxRem(padding-left, 15);
+    .popular-item-child {
+      position: relative;
+      overflow: hidden;
+    }
+    .popular-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      @include pxRem(padding, 10);
+      width: 100%;
+      background-color: rgba(0,0,0,0.7);
+      h3 {
+        text-transform: uppercase;
+        color: #fff;
+      }
+      span {
+       @include pxRem(margin-top, 3);
+       color: #fff;
+       opacity: 0.7; 
+       display: block;
+      }
+    }
+    &:hover {
+      .popular-content {
+        bottom: 6px;
+        transform: translateY(0);
+        transition: all 0.5s ease-out;
+      }
+    }
+  }
+}
+
+.section-brands {
+  .brand-list {
+    display: flex;
+    align-items: center;
+  }
+  .brand-item {
+    width: calc(100%/6);
+  }
+}
+
+.section-blogs {
+  .blog-item .row {
+    align-items: center;
+    a {
+      display: block;
+    }
+  }
+  .blog-content {
+    a.blog-title {
+      color: #000;
+      text-transform: uppercase;
+    }
+    a.read-more {
+      color: #057159;
+    }
+  }
+}

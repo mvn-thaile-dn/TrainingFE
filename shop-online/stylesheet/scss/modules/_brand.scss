@@ -1,0 +1,23 @@
+.brand-list {
+  .brand-item {
+    @include pxRem(width, 190);
+    @include pxRem(padding, 0 10);
+    float: left;
+    a {
+      display: inline-block;
+      width: 100%;
+      @include pxRem(height, 90);
+      @include pxRem(padding, 10);
+      vertical-align: middle;
+      @include pxRem(border, 1 solid #e8e9eb);
+      
+    }
+    img {
+      @include pxRem(max-height, 70);
+      margin: auto;
+      display: block;
+    }
+  }
+  @extend %clr;
+
+}

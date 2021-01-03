@@ -1,0 +1,37 @@
+
+.section-title {
+  text-align: center;
+  @include pxRem(margin-bottom, 10);
+  text-transform: uppercase;
+  span {
+    font-size: map-get($font-sizes, m);
+    font-weight: map-get($font-weights, bold);
+    color: #000;
+    text-transform: up;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 50px;
+      background-color: map-get($colors, primary);
+      top: 11px;
+      left: -65px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 50px;
+      background-color: map-get($colors, primary);
+      top: 11px;
+      right: -65px;
+    }
+  }
+
+}
+.section-sub-title {
+  text-align: center;
+}
+
+

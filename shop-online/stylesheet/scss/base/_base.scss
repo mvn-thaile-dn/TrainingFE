@@ -5,10 +5,9 @@ body {
   font-family: $font-body;
   font-weight: map-get($font-weights, normal);
   font-size: $font-size-base;
+  color: #555;
   letter-spacing: -.025em;
-}
-p {
-  line-height: 1.45;
+  line-height: 1.5;
 }
 ul {
   list-style-type: none;

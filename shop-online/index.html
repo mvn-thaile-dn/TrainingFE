@@ -4,55 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/cfc5d27bdd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
+  <header class="page-header">
       <div class="header-top">
-        <div class="container">
-          <ul class="header-top-left">
-            <li><a href="#"><i></i><span>Wishlist</span></a></li>
-            <li><a href="#"><i></i><span>Login</span></a></li>
-            <li><a href="#"><i></i><span>Create an account</span></a></li>
+        <div class="container flex-align-center-space-between">
+          <ul class="header-top-left flex-between">
+            <li><a href="#"><i class="fa fa-heart"></i><span> Wishlist</span></a></li>
+            <li><a href="#"><i class="fa fa-sign-in"></i><span> Login</span></a></li>
+            <li><a href="#"><i class="fa fa-pencil"></i><span> Create an account</span></a></li>
           </ul>
-          <div class="header-top-right">
+          <div class="header-top-right flex-between">
             <div class="currency-picker">
-              <span>USD</span>
-              <ul class="currencies">
+              <span class="selected-currency">USD</span>
+              <ul id="currencies">
                 <li>INR</li>
                 <li>AUD</li>
                 <li>JPY</li>
                 <li>EUR</li>
               </ul>
             </div>
-            <a href="#"><i></i><span>0</span></a>
+            <a href="#" class="header-cart">
+              <i class="fa fa-shopping-cart"></i>
+              <span id="cart-count">0</span></a>
           </div>
         </div>
       </div>
       <div class="header-middle">
         <div class="container">
-          <div class="header-middle-left">
-            <a href="#"><img src="" alt=""></a>
-          </div>
-          <div class="header-middle-right">
-            <div class="header-phone">
-              <i></i>
-              <div class="header-phone-content">
-                <span>Order online or call us</span>
-                <span>+(1800) 000 8808</span>
-              </div>
+          <div class="flex-between">
+            <div class="header-middle-left">
+              <a href="#"><img src="assets/logo/logo-home.png" alt=""></a>
             </div>
-            <div class="header-shipping">
-              <i></i>
-              <div class="header-shipping-content">
-                <span>Free shipping</span>
-                <span>On order about $99</span>
+            <div class="header-middle-right">
+              <div class="flex-around header-phone">
+                <i class="fa fa-phone-square"></i>
+                <div class="flex-column header-phone-content">
+                  <span>Order online or call us</span>
+                  <span>+(1800) 000 8808</span>
+                </div>
               </div>
-            </div>
-            <div class="header-search">
-              <form action="" class="form-search">
-                <input type="text" placeholder="Search">
-                <button type="submit"><i></i></button>
-              </form>
+              <div class="flex-around header-shipping">
+                <i class="fa fa-truck"></i>
+                <div class="flex-column header-shipping-content">
+                  <span>Free shipping</span>
+                  <span>On order about $99</span>
+                </div>
+              </div>
+              <div class="header-search">
+                <form action="" class="form-search">
+                  <input type="text" placeholder="Search">
+                  <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -60,98 +66,91 @@
       <nav class="header-nav">
         <div class="container">
           <div class="nav-content">
-            <ul class="nav-list">
-              <li class="nav-item">
-                <a href="#">Demo<i></i></a>
-                <ul class="dropdown">
+            <ul class="nav-list flex">
+              <li class="nav-item dropdown">
+                <a class="parent-link" href="#">Demo<i></i></a>
+                <ul class="mega-dropdown">
                   <li><a href="#">Home 1</a></li>
                   <li><a href="#">Home 2</a></li>
-                  <li><a href="#">Home 1</a></li>
-                  <li><a href="#">Home 1</a></li>
+                  <li><a href="#">Home 3</a></li>
+                  <li><a href="#">Home 4</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a href="#">Shop<i></i></a>
+              <li class="nav-item mega">
+                <a class="parent-link" href="#">Shop<i></i></a>
                 <div class="megamenu">
-                  <div class="row">
-                    <div class="col-3">
-                      <a href="#">Shop Page</a>
-                      <ul class="sub-link-lev-2">
-                        <li><a href="#">Shop page 1</a></li>
-                        <li><a href="#">Shop page 2</a></li>
-                        <li><a href="#">Shop page 3</a></li>
-                      </ul>
+                  <div class="container">
+                    <div class="row megamenu-list">
+                      <div class="col-3 megamenu-item">
+                        <a href="#">Shop Page</a>
+                        <ul class="sub-links">
+                          <li><a href="#">Shop page 1</a></li>
+                          <li><a href="#">Shop page 2</a></li>
+                          <li><a href="#">Shop page 3</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3 megamenu-item">
+                        <a href="#">Shop Page</a>
+                        <ul class="sub-links">
+                          <li><a href="#">Shop page 1</a></li>
+                          <li><a href="#">Shop page 2</a></li>
+                          <li><a href="#">Shop page 3</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3 megamenu-item">
+                        <a href="#">Shop Page</a>
+                        <ul class="sub-links">
+                          <li><a href="#">Left sidebar</a></li>
+                          <li><a href="#">Right sidebar</a></li>
+                          <li><a href="#">Top sidebar</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3 megamenu-item">
+                        <a href="#">Shop Feature</a>
+                        <ul class="sub-links">
+                          <li><a href="#">Feature 1</a></li>
+                          <li><a href="#">Feature 2</a></li>
+                          <li><a href="#">Feature 3</a></li>
+                        </ul>
+                      </div>
                     </div>
-                    <div class="col-3">
-                      <a href="#">Shop Page</a>
-                      <ul class="sub-link-lev-2">
-                        <li><a href="#">Shop page 1</a></li>
-                        <li><a href="#">Shop page 2</a></li>
-                        <li><a href="#">Shop page 3</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-3">
-                      <a href="#">Shop Page</a>
-                      <ul class="sub-link-lev-2">
-                        <li><a href="#">Left sidebar</a></li>
-                        <li><a href="#">Right sidebar</a></li>
-                        <li><a href="#">Top sidebar</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-3">
-                      <a href="#">Shop Feature</a>
-                      <ul class="sub-link-lev-2">
-                        <li><a href="#">Feature 1</a></li>
-                        <li><a href="#">Feature 2</a></li>
-                        <li><a href="#">Feature 3</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-4"><a href=""><img src="" alt=""></a></div>
-                    <div class="col-4"><a href=""><img src="" alt=""></a></div>
-                    <div class="col-4"><a href=""><img src="" alt=""></a></div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <a href="#">Feature<i></i></a>
+              <li class="nav-item mega">
+                <a class="parent-link" href="#">Feature<i></i></a>
                 <div class="megamenu">
-                  <div class="row">
-                    <div class="col-3">
-                      <a href="#">Product Page</a>
-                      <ul class="sub-link-lev-2">
-                        <li><a href="#">Product page 1</a></li>
-                        <li><a href="#">Product page 2</a></li>
-                        <li><a href="#">Product page 3</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-3">
-                      <a href="#">Shop Page</a>
-                      <ul class="sub-link-lev-2">
-                        <li><a href="#">Shop page 1</a></li>
-                        <li><a href="#">Shop page 2</a></li>
-                        <li><a href="#">Shop page 3</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-3">
-                      <a href="#">Shop Page</a>
-                      <ul class="sub-link-lev-2">
-                        <li><a href="#">Left sidebar</a></li>
-                        <li><a href="#">Right sidebar</a></li>
-                        <li><a href="#">Top sidebar</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-3">
-                      <a href="#">Shop Feature</a>
-                      <ul class="sub-link-lev-2">
-                        <li><a href="#">Feature 1</a></li>
-                        <li><a href="#">Feature 2</a></li>
-                        <li><a href="#">Feature 3</a></li>
-                      </ul>
+                  <div class="container">
+                    <div class="row megamenu-list">
+                      <div class="col-3 megamenu-item">
+                        <a href="#">Product Page</a>
+                        <ul class="sub-links">
+                          <li><a href="#">Product page 1</a></li>
+                          <li><a href="#">Product page 2</a></li>
+                          <li><a href="#">Product page 3</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3 megamenu-item">
+                        <a href="#">Shop Page</a>
+                        <ul class="sub-links">
+                          <li><a href="#">Shop page 1</a></li>
+                          <li><a href="#">Shop page 2</a></li>
+                          <li><a href="#">Shop page 3</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3 megamenu-item">
+                        <a href="#">Shop Page</a>
+                        <ul class="sub-links">
+                          <li><a href="#">Left sidebar</a></li>
+                          <li><a href="#">Right sidebar</a></li>
+                          <li><a href="#">Top sidebar</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-3 megamenu-item">
+                        <a href="#"><img src="assets/img/camera-in-menu.jpg" alt=""></a>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-3"><a href=""><img src="" alt=""></a></div>
                 </div>
               </li>
             </ul>
@@ -160,69 +159,210 @@
       </nav>
     </div>
   </header>
-  <main>
+  <main class="page-main">
     <!-- section-slideshow -->
     <section class="section-slideshow">
       <ul class="slideshow-list">
         <li class="slideshow-item">
+          <img src="assets/img/slideshows/christmas.jpg" alt="">
+        </li>
+        <!-- <li class="slideshow-item">
           <img src="" alt="">
         </li>
         <li class="slideshow-item">
           <img src="" alt="">
-        </li>
-        <li class="slideshow-item">
-          <img src="" alt="">
-        </li>
+        </li> -->
       </ul>
     </section>
      <!-- section-selection -->
-    <section class="section-collections">
+    <section class="section-collections mb-6">
       <div class="container">
-        <ul>
-          <li><a href="#"><img src="" alt=""><span>Home entertainment</span></a></li>
-          <li><a href="#"><img src="" alt=""><span>Accessories</span></a></li>
-          <li><a href="#"><img src="" alt=""><span>Mobiles & Tablets</span></a></li>
+        <ul class="row">
+          <li class="col-4"><a href="#"><img src="assets/img/accesori.jpg" alt=""><span>Home entertainment</span></a></li>
+          <li class="col-4"><a href="#"><img src="assets/img/accesori.jpg" alt=""><span>Accessories</span></a></li>
+          <li class="col-4"><a href="#"><img src="assets/img/accesori.jpg" alt=""><span>Mobiles & Tablets</span></a></li>
         </ul>
       </div>
     </section>
     <!-- section-bestselling -->
-    <section class="section-best-selling">
+    <section class="section-best-selling mt-6 mb-6">
       <div class="container">
-        <div class="selling-description">
-          <h3>Weekly bestselling</h3>
-          <p>A large set of beautiful & fully flexible homepage layouts
+        <div class="selling-description mb-6">
+          <h3 class="section-title"><span>Weekly bestselling</span></h3>
+          <p class="section-sub-title">A large set of beautiful & fully flexible homepage layouts<br>
             lets you create your website quickly & easily.
           </p>
         </div>
         <ul class="product-list">
           <li class="product-item">
-            <div class="item-image"><a href=""><img src="" alt=""></a></div>
-            <div class="item-detail">
-              <a href="#">32J4100 32 inches HD Ready LED TV</a>
-              <span>$779.00</span>
+            <div class="product-content">
+              <div class="item-image">
+                <a href="#" class="item-link">
+                  <img src="./assets/img/product/camera.jpg" alt="">
+                  <span class="product-labels">
+                    <label for="" class="lbl lbl-onsale">Sale</label>
+                  </span>
+                </a>
+                <div class="button-sets">
+                  <div class="wishlist-btn">
+                    <a href="#" class="btn-link wishlist add-wish-list">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                  </div>
+                  <a href="#" class="btn-link btn-choose-options">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="btn-link quick-view">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="item-detail">
+                <a href="#">32J4100 32 inches HD Ready LED TV</a>
+                <div>
+                  <span class="product-price price-sale">$779.00</span>
+                  <span class="product-price price-original">$800.00</span>
+                </div>
+              </div>
             </div>
           </li>
           <li class="product-item">
-            <div class="item-image"><a href=""><img src="" alt=""></a></div>
-            <div class="item-detail">
-              <a href="#">32J4100 32 inches HD Ready LED TV</a>
-              <span>$779.00</span>
+            <div class="product-content">
+              <div class="item-image">
+                <a href="#" class="item-link">
+                  <img src="./assets/img/product/tv.jpg" alt="">
+                  <span class="product-labels">
+                    <label for="" class="lbl lbl-onsale">Sale</label>
+                  </span>
+                </a>
+                <div class="button-sets">
+                  <div class="wishlist-btn">
+                    <a href="#" class="btn-link wishlist add-wish-list">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                  </div>
+                  <a href="#" class="btn-link btn-choose-options">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="btn-link quick-view">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="item-detail">
+                <a href="#">32J4100 32 inches HD Ready LED TV</a>
+                <div>
+                  <span class="product-price price-sale">$779.00</span>
+                  <span class="product-price price-original">$800.00</span>
+                </div>
+              </div>
             </div>
           </li>
-          <ul class="watches-list">
-            <li class="watches-item"></li>
-            <li class="watches-item"></li>
-            <li class="watches-item"></li>
-          </ul>
+          <li class="product-item">
+            <div class="product-content">
+              <div class="item-image">
+                <a href="#" class="item-link">
+                  <img src="./assets/img/product/laptop.jpg" alt="">
+                  <span class="product-labels">
+                    <label for="" class="lbl lbl-onsale">Sale</label>
+                  </span>
+                </a>
+                <div class="button-sets">
+                  <div class="wishlist-btn">
+                    <a href="#" class="btn-link wishlist add-wish-list">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                  </div>
+                  <a href="#" class="btn-link btn-choose-options">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="btn-link quick-view">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="item-detail">
+                <a href="#">32J4100 32 inches HD Ready LED TV</a>
+                <div>
+                  <span class="product-price price-sale">$779.00</span>
+                  <span class="product-price price-original">$800.00</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="product-item">
+            <div class="product-content">
+              <div class="item-image">
+                <a href="#" class="item-link">
+                  <img src="./assets/img/product/canon.jpg" alt="">
+                  <span class="product-labels">
+                    <label for="" class="lbl lbl-onsale">Sale</label>
+                  </span>
+                </a>
+                <div class="button-sets">
+                  <div class="wishlist-btn">
+                    <a href="#" class="btn-link wishlist add-wish-list">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                  </div>
+                  <a href="#" class="btn-link btn-choose-options">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="btn-link quick-view">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="item-detail">
+                <a href="#">32J4100 32 inches HD Ready LED TV</a>
+                <div>
+                  <span class="product-price price-sale">$779.00</span>
+                  <span class="product-price price-original">$800.00</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="product-item">
+            <div class="product-content">
+              <div class="item-image">
+                <a href="#" class="item-link">
+                  <img src="./assets/img/product/canon.jpg" alt="">
+                  <span class="product-labels">
+                    <label for="" class="lbl lbl-onsale">Sale</label>
+                  </span>
+                </a>
+                <div class="button-sets">
+                  <div class="wishlist-btn">
+                    <a href="#" class="btn-link wishlist add-wish-list">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                  </div>
+                  <a href="#" class="btn-link btn-choose-options">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="btn-link quick-view">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="item-detail">
+                <a href="#">32J4100 32 inches HD Ready LED TV</a>
+                <div>
+                  <span class="product-price price-sale">$779.00</span>
+                  <span class="product-price price-original">$800.00</span>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
     <!-- section sales -->
-    <section class="section-sales">
+    <section class="section-sales mt-7 mt-7">
       <div class="wrapper">
         <div class="sales-content">
-          <h2>The best choice for your store</h2>
-          <p>NexGeek is a highly configurable, elegant and clean Shopify theme that seamlessly adapts for all screen sizes and devices. 
+          <h2 class="">The best choice for your store</h2>
+          <p class="">NexGeek is a highly configurable, elegant and clean Shopify theme that seamlessly adapts for all screen sizes and devices.<br>
             NexGeek has every functionality that you need to run your business online successfully
           </p>
           <a href="" class="btn btn-primary">Buy Now</a>
@@ -230,185 +370,333 @@
       </div>
     </section>
     <!-- section trending now -->
-    <section class="section-trendding">
+    <section class="section-trendding mt-6 mb-6">
       <div class="container">
-        <div class="selling-description">
-          <h3>Trending now</h3>
-          <p>You can combine any sections from any demo with only one
+        <div class="selling-description mb-8">
+          <h3 class="section-title"><span>Trending now</span> </h3>
+          <p class="section-sub-title">You can combine any sections from any demo with only one<br>
             click to create your dream store.
           </p>          
         </div>
       </div>
       <div class="trending-selection">
         <ul class="collection-tabs">
-          <li><a href="#collection-1">Trending</a></li>
-          <li><a href="#collection-2">Camera</a></li>
-          <li><a href="#collection-3">Accessories</a></li>
+          <li class="active"><a class="btn btn-tab-link" href="#collection-1">Trending</a></li>
+          <li><a class="btn btn-tab-link" href="#collection-2">Camera</a></li>
+          <li><a class="btn btn-tab-link" href="#collection-3">Accessories</a></li>
         </ul>
         <div class="tab-container">
           <div id="collection-1">
-            <ul class="product-list">
-              <li class="product-item">
-                <div class="item-image"><a href=""><img src="" alt=""></a></div>
-                <div class="item-detail">
-                  <a href="#">32J4100 32 inches HD Ready LED TV</a>
-                  <span>$779.00</span>
-                </div>
-              </li>
-              <li class="product-item">
-                <div class="item-image"><a href=""><img src="" alt=""></a></div>
-                <div class="item-detail">
-                  <a href="#">32J4100 32 inches HD Ready LED TV</a>
-                  <span>$779.00</span>
-                </div>
-              </li>
-              <ul class="watches-list">
-                <li class="watches-item"></li>
-                <li class="watches-item"></li>
-                <li class="watches-item"></li>
-              </ul>
-            </ul>            
-          </div>
-          <div id="collection-2">
-            <ul class="product-list">
-              <li class="product-item">
-                <div class="item-image"><a href=""><img src="" alt=""></a></div>
-                <div class="item-detail">
-                  <a href="#">32J4100 32 inches HD Ready LED TV</a>
-                  <span>$779.00</span>
-                </div>
-              </li>
-              <li class="product-item">
-                <div class="item-image"><a href=""><img src="" alt=""></a></div>
-                <div class="item-detail">
-                  <a href="#">32J4100 32 inches HD Ready LED TV</a>
-                  <span>$779.00</span>
-                </div>
-              </li>
-              <ul class="watches-list">
-                <li class="watches-item"></li>
-                <li class="watches-item"></li>
-                <li class="watches-item"></li>
-              </ul>
-            </ul>            
-          </div>
-          <div id="collection-3">
-            <ul class="product-list">
-              <li class="product-item">
-                <div class="item-image"><a href=""><img src="" alt=""></a></div>
-                <div class="item-detail">
-                  <a href="#">32J4100 32 inches HD Ready LED TV</a>
-                  <span>$779.00</span>
-                </div>
-              </li>
-              <li class="product-item">
-                <div class="item-image"><a href=""><img src="" alt=""></a></div>
-                <div class="item-detail">
-                  <a href="#">32J4100 32 inches HD Ready LED TV</a>
-                  <span>$779.00</span>
-                </div>
-              </li>
-              <ul class="watches-list">
-                <li class="watches-item"></li>
-                <li class="watches-item"></li>
-                <li class="watches-item"></li>
-              </ul>
-            </ul>            
+            <div class="container">
+              <ul class="product-list">
+                <li class="product-item">
+                  <div class="product-content">
+                    <div class="item-image">
+                      <a href="#" class="item-link">
+                        <img src="./assets/img/product/camera.jpg" alt="">
+                        <span class="product-labels">
+                          <label for="" class="lbl lbl-onsale">Sale</label>
+                        </span>
+                      </a>
+                      <div class="button-sets">
+                        <div class="wishlist-btn">
+                          <a href="#" class="btn-link wishlist add-wish-list">
+                            <i class="fa fa-heart"></i>
+                          </a>
+                        </div>
+                        <a href="#" class="btn-link btn-choose-options">
+                          <i class="fa fa-cog" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="btn-link quick-view">
+                          <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="item-detail">
+                      <a href="#">32J4100 32 inches HD Ready LED TV</a>
+                      <div>
+                        <span class="product-price price-sale">$779.00</span>
+                        <span class="product-price price-original">$800.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-item">
+                  <div class="product-content">
+                    <div class="item-image">
+                      <a href="#" class="item-link">
+                        <img src="./assets/img/product/tv.jpg" alt="">
+                        <span class="product-labels">
+                          <label for="" class="lbl lbl-onsale">Sale</label>
+                        </span>
+                      </a>
+                      <div class="button-sets">
+                        <div class="wishlist-btn">
+                          <a href="#" class="btn-link wishlist add-wish-list">
+                            <i class="fa fa-heart"></i>
+                          </a>
+                        </div>
+                        <a href="#" class="btn-link btn-choose-options">
+                          <i class="fa fa-cog" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="btn-link quick-view">
+                          <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="item-detail">
+                      <a href="#">32J4100 32 inches HD Ready LED TV</a>
+                      <div>
+                        <span class="product-price price-sale">$779.00</span>
+                        <span class="product-price price-original">$800.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-item">
+                  <div class="product-content">
+                    <div class="item-image">
+                      <a href="#" class="item-link">
+                        <img src="./assets/img/product/laptop.jpg" alt="">
+                        <span class="product-labels">
+                          <label for="" class="lbl lbl-onsale">Sale</label>
+                        </span>
+                      </a>
+                      <div class="button-sets">
+                        <div class="wishlist-btn">
+                          <a href="#" class="btn-link wishlist add-wish-list">
+                            <i class="fa fa-heart"></i>
+                          </a>
+                        </div>
+                        <a href="#" class="btn-link btn-choose-options">
+                          <i class="fa fa-cog" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="btn-link quick-view">
+                          <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="item-detail">
+                      <a href="#">32J4100 32 inches HD Ready LED TV</a>
+                      <div>
+                        <span class="product-price price-sale">$779.00</span>
+                        <span class="product-price price-original">$800.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-item">
+                  <div class="product-content">
+                    <div class="item-image">
+                      <a href="#" class="item-link">
+                        <img src="./assets/img/product/canon.jpg" alt="">
+                        <span class="product-labels">
+                          <label for="" class="lbl lbl-onsale">Sale</label>
+                        </span>
+                      </a>
+                      <div class="button-sets">
+                        <div class="wishlist-btn">
+                          <a href="#" class="btn-link wishlist add-wish-list">
+                            <i class="fa fa-heart"></i>
+                          </a>
+                        </div>
+                        <a href="#" class="btn-link btn-choose-options">
+                          <i class="fa fa-cog" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="btn-link quick-view">
+                          <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="item-detail">
+                      <a href="#">32J4100 32 inches HD Ready LED TV</a>
+                      <div>
+                        <span class="product-price price-sale">$779.00</span>
+                        <span class="product-price price-original">$800.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-item">
+                  <div class="product-content">
+                    <div class="item-image">
+                      <a href="#" class="item-link">
+                        <img src="./assets/img/product/canon.jpg" alt="">
+                        <span class="product-labels">
+                          <label for="" class="lbl lbl-onsale">Sale</label>
+                        </span>
+                      </a>
+                      <div class="button-sets">
+                        <div class="wishlist-btn">
+                          <a href="#" class="btn-link wishlist add-wish-list">
+                            <i class="fa fa-heart"></i>
+                          </a>
+                        </div>
+                        <a href="#" class="btn-link btn-choose-options">
+                          <i class="fa fa-cog" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="btn-link quick-view">
+                          <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="item-detail">
+                      <a href="#">32J4100 32 inches HD Ready LED TV</a>
+                      <div>
+                        <span class="product-price price-sale">$779.00</span>
+                        <span class="product-price price-original">$800.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>   
+            </div>     
           </div>
         </div>
       </div>
     </section>
     <!-- section popular collections -->
-    <section class="section-popular-collections">
-      <div class="container">
-        <div class="selling-description">
-          <h3>Popular collections</h3>
-          <p>Explor out best rated collection
-          </p>
-        </div>
-        <ul class="product-list">
-          <li class="product-item">
-            <div class="item-image"><a href=""><img src="" alt=""></a></div>
-            <div class="item-detail">
-              <a href="#">32J4100 32 inches HD Ready LED TV</a>
-              <span>$779.00</span>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="item-image"><a href=""><img src="" alt=""></a></div>
-            <div class="item-detail">
-              <a href="#">32J4100 32 inches HD Ready LED TV</a>
-              <span>$779.00</span>
-            </div>
-          </li>
-          <ul class="watches-list">
-            <li class="watches-item"></li>
-            <li class="watches-item"></li>
-            <li class="watches-item"></li>
-          </ul>
-        </ul>
+    <section class="section-popular-collections mb-6">
+      <div class="selling-description mb-6">
+        <h3 class="section-title"><span>Popular collections</span> </h3>
+        <p class="section-sub-title">Explor out best rated collection
+        </p>
       </div>
+      <div class="container">
+        <ul class="popular-list row">
+          <li class="popular-item">
+            <div class="popular-item-child">
+              <a href="#">
+                <div class="popular-image">
+                  <img src="assets/img/popular-tablet.jpg" alt="">
+                </div>
+                <div class="popular-content">
+                  <h3>Healthy</h3>
+                  <span>18 products</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="popular-item">
+            <div class="popular-item-child">
+              <a href="#">
+                <div class="popular-image">
+                  <img src="assets/img/popular-tablet.jpg" alt="">
+                </div>
+                <div class="popular-content">
+                  <h3>Healthy</h3>
+                  <span>18 products</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="popular-item">
+            <div class="popular-item-child">
+              <a href="#">
+                <div class="popular-image">
+                  <img src="assets/img/popular-tablet.jpg" alt="">
+                </div>
+                <div class="popular-content">
+                  <h3>Healthy</h3>
+                  <span>18 products</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="popular-item">
+            <div class="popular-item-child">
+              <a href="#">
+                <div class="popular-image">
+                  <img src="assets/img/popular-tablet.jpg" alt="">
+                </div>
+                <div class="popular-content">
+                  <h3>Healthy</h3>
+                  <span>18 products</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="popular-item">
+            <div class="popular-item-child">
+              <a href="#">
+                <div class="popular-image">
+                  <img src="assets/img/popular-tablet.jpg" alt="">
+                </div>
+                <div class="popular-content">
+                  <h3>Healthy</h3>
+                  <span>18 products</span>
+                </div>
+              </a>
+            </div>
+          </li>          
+        </ul>
+      </div> 
     </section>
     <!-- sections brands -->
-    <section class="section-brands">
+    <section class="section-brands mb-6">
       <div class="container">
-        <div class="selling-description">
-          <h3>Trending now</h3>
-          <p>You can combine any sections from any demo with only one
-            click to create your dream store.
-          </p>          
+        <div class="selling-description mb-6">
+          <h3 class="section-title"><span>Brands we sale</span></h3>
+          <p class="section-sub-title">Our top picks bank</p>          
         </div>
         <ul class="brand-list">
           <li class="brand-item">
-            <a href="#"><img src="" alt=""></a>
+            <a href="#"><img src="assets/img/brand_famila.png" alt=""></a>
           </li>
           <li class="brand-item">
-            <a href="#"><img src="" alt=""></a>
+            <a href="#"><img src="assets/img/brand_famila.png" alt=""></a>
           </li>
           <li class="brand-item">
-            <a href="#"><img src="" alt=""></a>
+            <a href="#"><img src="assets/img/brand_qq.png" alt=""></a>
           </li>
           <li class="brand-item">
-            <a href="#"><img src="" alt=""></a>
+            <a href="#"><img src="assets/img/brand_qq.png" alt=""></a>
           </li>
           <li class="brand-item">
-            <a href="#"><img src="" alt=""></a>
+            <a href="#"><img src="assets/img/brand_famila.png" alt=""></a>
+          </li>
+          <li class="brand-item">
+            <a href="#"><img src="assets/img/brand_famila.png" alt=""></a>
           </li>
         </ul>
       </div>
     </section>
     <!-- section blog -->
-    <section class="section-blog">
+    <section class="section-blogs">
       <div class="container">
-        <div class="selling-description">
-          <h3>Latest from our blog</h3>         
+        <div class="selling-description mb-6">
+          <h3 class="section-title"><span>Latest from our blog</span></h3>         
         </div>
-        <ul class="blog-list">
-          <li class="blog-item">
-            <a href=""><img src="" alt=""></a>
-            <div class="blog-content">
-              <h2><a href="">New selfie expert</a></h2>
-              <span><time datetime="2016-10-20T12:28:00Z">October 20, 2016</time></span>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae aliquam quisquam consequatur quae velit perspiciatis ratione nihil minus, expedita perferendis
-              </p>
-              <a href="">Read more</a>
+        <ul class="row blog-list">
+          <li class="col-6 blog-item">
+            <div class="row">
+              <a class="col-6" href=""><img src="assets/img/blog_1.jpg" alt=""></a>
+              <div class="col-6 blog-content">
+                <h3><a class="blog-title" href="#">New selfie expert</a></h3>
+                <span><time datetime="2016-10-20T12:28:00Z">October 20, 2016</time></span>
+                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae aliquam quisquam consequatur quae velit perspiciatis ratione nihil minus, expedita perferendis
+                </p>
+                <a class="read-more" href="#">Read more</a>
+              </div>
             </div>
           </li>
-          <li class="blog-item">
-            <a href=""><img src="" alt=""></a>
-            <div class="blog-content">
-              <h2><a href="">New selfie expert</a></h2>
-              <span><time datetime="2016-10-20T12:28:00Z">October 20, 2016</time></span>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae aliquam quisquam consequatur quae velit perspiciatis ratione nihil minus, expedita perferendis
-              </p>
-              <a href="">Read more</a>
+          <li class="col-6 blog-item">
+            <div class="row">
+              <a class="col-6" href=""><img src="assets/img/blog2.jpg" alt=""></a>
+              <div class="col-6 blog-content">
+                <h3><a class="blog-title" href="#">New selfie expert</a></h3>
+                <span><time datetime="2016-10-20T12:28:00Z">October 20, 2016</time></span>
+                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae aliquam quisquam consequatur quae velit perspiciatis ratione nihil minus, expedita perferendis
+                </p>
+                <a class="read-more" href="#">Read more</a>
+              </div>
             </div>
           </li>
         </ul>
       </div>  
     </section>
   </main>
-  <footer>
+  <footer class="page-footer mt-6">
     <div class="footer-top">
       <h2>Sign up for newsletters</h2>
       <p>Get Weekly updates about our latest shop and special offers</p>

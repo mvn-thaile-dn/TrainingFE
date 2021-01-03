@@ -1,0 +1,79 @@
+.product-list {
+  display: flex;
+  .product-item {
+    @include pxRem(width, 228);
+    @include pxRem(padding, 3 15);
+    .product-content {
+      @include pxRem(margin-bottom, 20);
+      text-align: center;
+      transition: all 0.5s ease-out;
+      &:hover {
+        box-shadow: 0 0 3px rgba(0,0,0,0.2);
+        .button-sets {
+          transform: translateX(0);
+        }
+      }
+    }
+    .item-image {
+      width: 100%;
+      padding: 0;
+      @include pxRem(margin-bottom, 10);
+      overflow: hidden;
+      position: relative;
+      .item-link {
+        display: block;
+        @include pxRem(height, 198);
+        img {
+          width: 100%;
+          display: inline-block;
+          transition: all ease-out 0.5s;
+          position: absolute;
+          z-index: 2;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    .product-labels {
+      position: absolute;
+      @include pxRem(top, 5);
+      @include pxRem(right, 5);
+      z-index: 100;
+    }
+    .button-sets {
+      position: absolute;
+      @include pxRem(top, 5);
+      left: 0;
+      transform: translateX(-100%);
+      z-index: 100;
+      transition: all 0.3s ease-out;
+    }
+    .item-detail {
+      @include pxRem(padding, 0 10 10);
+      a {
+        color: #000;
+        font-size: map-get($font-sizes, xxs);
+      }
+      div {
+        @include pxRem(margin-top, 8);
+      }
+      .product-price {
+        color: #000;
+      }
+      .price-sale {
+        font-weight: map-get($font-weights, medium);
+        color: #ff6c00;
+        font-size: map-get($font-sizes, s);
+      }
+      .price-original {
+        opacity: .6;
+        text-decoration: line-through;
+        font-weight: map-get($font-weights, small);
+      }
+    }
+  }
+}
