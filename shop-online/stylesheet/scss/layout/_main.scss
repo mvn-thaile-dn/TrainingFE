@@ -112,10 +112,11 @@
   .popular-list {
     display: flex;
     align-items: center;
+    @include pxRem(padding, 10);
   }
   .popular-item {
-    @include pxRem(width, 228);
-    @include pxRem(padding-left, 15);
+    width: 20%;
+    @include pxRem(padding, 0 8);
     .popular-item-child {
       position: relative;
       overflow: hidden;
