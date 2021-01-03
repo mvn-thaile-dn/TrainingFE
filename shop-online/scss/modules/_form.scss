@@ -1,0 +1,7 @@
+input {
+  font-size: map-get($font-sizes, xxs);
+  color: map-get($colors, dark-black);
+  line-height: 1.2;
+  background-color: map-get($colors, white);
+  border: 1px solid #e8e9eb;
+}

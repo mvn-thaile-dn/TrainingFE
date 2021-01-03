@@ -1,0 +1,16 @@
+.tab-link {
+  display: inline-block;
+  @include pxRem(padding, 5 12);
+  text-transform: uppercase;
+  font-weight: map-get($font-weights, medium);
+  font-size: map-get($font-sizes, xxs);
+  letter-spacing: map-get($letter-spacings, xxl);
+  color: #929292;
+  background-color: #f6f6f6;
+  @include pxRem(border, 2 solid #e8e8e8);
+  &:active {
+    background-color: mat-get($colors, white);
+    color: #075159;
+    border-color: #075159;
+  }
+}
