@@ -1,0 +1,71 @@
+.page-footer {
+
+}
+.footer-top {
+  background-color: map-get($colors, primary-light);
+  @include pxRem(padding, 30 0);
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: map-get($font-weights, bold);
+    @include pxRem(font-size, 20);
+  }
+  p {
+    color: white;
+  }
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    input {
+      @include pxRem(height, 46);
+      color: #222;
+      background-color: #a4d2d6;
+      border: none;
+    }
+  }
+}
+
+.footer-middle {
+  background-color: #000000;
+  @include pxRem(padding, 30 0);
+  h5 {
+    color: #FFAD00;
+    @include pxRem(font-size, map-get($font-sizes, xm));
+    font-weight: map-get($font-weights, bold);
+    text-transform: uppercase;
+    @include pxRem(margin-bottom, 10);
+  }
+  .footer-link-list {
+    li {
+      @include pxRem(margin-bottom, 7);
+      @include pxRem(font-size, 14);
+    }
+    a {
+      color: #d6e7ea;
+    }
+  }
+}
+.footer-bottom {
+  background-color: #000000;
+  color: #d6e7ea;
+  @include pxRem(font-size, 14);
+  .footer-bottom-content {
+    border-top: 1px dotted white;
+    margin-left: 0;
+    margin-right: 0;
+    @include pxRem(padding, 30 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .partner-list {
+      display: flex;
+      @include pxRem(font-size, 30);
+      li {
+        @include pxRem(margin-left, 10);
+      }
+    }
+  }
+}

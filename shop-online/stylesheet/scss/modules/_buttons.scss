@@ -1,0 +1,66 @@
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  @include pxRem(font-size, 15);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: normal;
+  transition: all 0.3s ease-in-out ;
+  color: #fff;
+  &:hover {
+    color: #fff;
+    opacity: 1;
+    background-color: #ff9f23;
+  }
+}
+.btn-primary {
+  background-color: map-get($colors, primary);
+  @include pxRem(padding, 8 18 8);
+  &:hover {
+    background-color: #0b7c88;
+  }
+}
+.btn-secondary {
+  color: map-get($colors, white);
+  background-color: #075159;
+  border: 1px solid map-get($colors, white);
+  &:hover {
+    background-color: #0b7c88;
+  }
+}
+.btn-third {
+  color: map-get($colors, white);
+  background-color: #075159;
+  @include pxRem(padding, 0 18);
+  &:hover {
+    opacity: 0.7;
+    background-color: #075159;
+  }
+}
+
+.btn-tab-link {
+  color: #929292;
+  @include pxRem(padding, 8 18 8);
+  background-color: #f6f6f6;
+  border: 2px solid #e8e8e8;
+  &:hover {
+    color: map-get($colors, primary);
+    background-color: #fff;
+  }
+}
+
+.btn-link {
+  color: #fff;
+  background-color: map-get($colors, primary);
+  font-size: map-get($font-sizes, xm);
+  padding: 0;
+  @include pxRem(margin-bottom, 5);
+  @include pxRem(line-height, 35);
+  display: block;
+  @include pxRem(width, 36);
+  @include pxRem(height, 36);
+}

@@ -1,0 +1,248 @@
+.page-header {
+  .header-top {
+    background-color: #e9edd7;
+    @include pxRem(height, 40);
+    @include pxRem(border-bottom, 1 solid #eee);
+    .header-top-left {
+      .fa {
+        color: #48a6a3;
+      }
+      li {
+        @include pxRem(margin-right, 8);
+      }
+    }
+    .header-top-right {
+      .header-cart {
+        color: #fff;
+        @include pxRem(font-size, 22);
+        @include pxRem(height, 39);
+        @include pxRem(line-height, 38);
+        @include pxRem(padding, 0 7);
+        background-color: map-get($colors, primary);
+        
+        #cart-count {
+          @include pxRem(font-size, 12);
+          @include pxRem(margin-left, 3);
+        }
+      }
+    }
+
+    a {
+      color: #222222;
+      @include pxRem(font-size, 12);
+      text-transform: uppercase;;
+      letter-spacing: 0.05em;
+    }
+
+    .currency-picker {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      @include pxRem(margin-right, 8);
+      .selected-currency {
+        display: inline-block;
+        @include pxRem(line-height, 37);
+        @include pxRem(height, 39);
+        cursor: pointer;
+        &:after {
+          content: '\f0d7';
+          font-family: 'FontAwesome';
+          @include pxRem(margin-left, 2);
+        }
+      }
+      #currencies {
+        display: none;
+        @include pxRem(min-width, 70);
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #f5f5f5;
+        top: 100%;
+        left: 50%;
+        @include pxRem(margin-left, -35);
+        z-index: 100;
+        text-align: center;
+      }
+    }
+
+  }
+  .header-middle {
+    @include pxRem(padding, 20 0);
+    background-color: #fff;
+    .header-middle-left {
+      width: 30%;
+    }
+    .header-middle-right {
+      width: 70%;
+      .fa {
+        color: map-get($colors, secondary);
+        @include pxRem(font-size, 35);
+      }
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .header-search {
+        width: 40%;
+      }
+      .header-phone {
+        .header-phone-content {
+          @include pxRem(padding, 0 10);
+          span:first-child {
+            color: #444;
+            font-weight: map-get($font-weights, small);
+            @include pxRem(font-size, 13);
+          }
+          span:last-child {
+            color: map-get($colors, primary);
+            font-weight: map-get($font-weights, medium);
+            @include pxRem(font-size, 15);
+            @include pxRem(line-height, 17);
+          }
+        }
+      }
+      .header-shipping {
+        .header-shipping-content {
+          @include pxRem(padding, 0 10);
+          span:first-child {
+            color: map-get($colors, primary);
+            font-weight: map-get($font-weights, medium);
+            @include pxRem(font-size, 15);
+            @include pxRem(line-height, 17);
+          }
+          span:last-child {
+            color: #444;
+            font-weight: map-get($font-weights, small);
+            @include pxRem(font-size, 13);
+          }
+        }
+      }
+      .header-search {
+        .form-search {
+          position: relative;
+        }
+        input {
+          vertical-align: middle;
+          margin: 0;
+          @include pxRem(height, 40);
+          @include pxRem(width, calc(100% - 40px));
+          
+        }
+        button {
+          background-color: map-get($colors, secondary);
+          @include pxRem(width, 40);
+          @include pxRem(height, 40);
+          .fa {
+            color: #fff;
+            @include pxRem(font-size, 15);
+          }
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .header-nav {
+    background-color: map-get($colors, primary);
+    position: relative;
+    .nav-item {
+      a.parent-link {
+        display: inline-block;
+        color: white;
+        @include pxRem(font-size, map-get($font-sizes, xxs));
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 40px;
+        @include pxRem(padding, 0 15);
+        letter-spacing: 0.02em;
+        &:hover {
+          background-color: map-get($colors, secondary);
+        }
+      }
+    }
+    li.dropdown {
+      position: relative;
+      &:hover .mega-dropdown {
+        visibility: visible;
+        opacity: 1;
+        top: 40px;
+      }
+    }
+    .mega-dropdown {
+      background-color: #fff;
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      top: 60px;
+      left: 0;
+      transition: all 0.4s ease-in-out;
+      z-index: 1000;
+      @include pxRem(width, 220px);
+      border: 1px solid #eeeeee;
+      box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.3);
+      li {
+        border-bottom: 1px solid #eeeeee;
+        &:last-child {
+          border: none;
+        }
+      }
+      a {
+        display: inline-block;
+        width: 100%;
+        color: #000;
+        @include pxRem(padding, 15);
+        &:hover {
+          background-color: #eee;
+        }
+        transition: all 0.3s ease-in-out;
+      }
+
+    }
+    li.mega:hover .megamenu {
+      visibility: visible;
+      opacity: 1;
+      top: 40px;
+    }
+    .megamenu {
+      position: absolute;
+      visibility: hidden;
+      top: 60px;
+      opacity: 0;
+      left: 0;
+      z-index: 1000;
+      @include pxRem(border-top, 4px solid map-get($colors, secondary));
+      width: 100%;
+      @include pxRem(padding, 25 0);
+      transition: all 0.4s ease-in-out;
+      border-bottom: 1px solid black;
+      background-color: #fff;
+      width: 100%;
+      .megamenu-item > a {
+        text-transform: uppercase;
+        color: #000000;
+        font-weight: map-get($font-weights, medium);
+        @include pxRem(padding, 0 0 8);
+        display: inline-block;
+      }
+      .sub-links a {
+        display: inline-block;
+        color: #000;
+        font-weight: map-get($font-weights, normal);
+        @include pxRem(padding, 3 0);
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 0;
+          height: 2px;
+          background-color: #000;
+          vertical-align: middle;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+          @include pxRem(width, 5);
+          @include pxRem(margin-right, 3);
+        }
+      }
+
+    }
+  }
+}

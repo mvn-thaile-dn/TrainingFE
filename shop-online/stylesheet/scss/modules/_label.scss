@@ -1,5 +1,5 @@
 .lbl {
-  color: map-get($colors, white);
+  color: #fff;
   text-transform: uppercase;
   font-size: map-get($font-sizes, xs);
   font-weight: map-get($font-weights, medium);
@@ -11,7 +11,9 @@
 
 .lbl-onsale {
   background-color: #ff708e;
+  border-radius: 0;
 }
 .lbl-trending {
   background-color: #f5a100;
+  border-radius: 0;
 }
